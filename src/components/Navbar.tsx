@@ -20,7 +20,7 @@ export default function Navbar() {
       as="nav"
       className="fixed w-full top-0 z-50"
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto ml-10 mr-10 px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           {/* Mobile menu button */}
           <div className="flex items-center lg:hidden">
@@ -34,11 +34,10 @@ export default function Navbar() {
           {/* Logo - centered on mobile, left on desktop */}
           <div className="flex flex-1 items-center justify-center lg:justify-start">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-amber-400 to-amber-600 rounded-lg flex items-center justify-center shadow-lg">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                </svg>
-              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-white drop-shadow-lg" viewBox="0 0 64 64" fill="currentColor">
+                <path d="M22.442 42.242h19.116v4.32H22.442z"/>
+                <path d="M52 2H12C6.477 2 2 6.478 2 12v40c0 5.523 4.477 10 10 10h40c5.523 0 10-4.477 10-10V12c0-5.522-4.477-10-10-10m-4.018 50H16.018V36.805h31.965V52zM20.85 34.645v-5.14h22.299v5.14zm30.175-1.954S43.111 30.1 32.001 21.162C20.889 30.1 12.975 32.691 12.975 32.691L9.777 26.6C22.031 20.641 32.001 12 32.001 12s9.969 8.641 22.222 14.6z"/>
+              </svg>
               <div className="hidden sm:block">
                 <h1 className="text-2xl font-bold text-white tracking-tight drop-shadow-lg">HOTERU</h1>
                 <p className="text-xs text-amber-400 drop-shadow-md">Luxury Hotel & Resort</p>
