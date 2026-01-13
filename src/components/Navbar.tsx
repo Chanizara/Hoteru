@@ -18,16 +18,16 @@ export default function Navbar() {
   return (
     <Disclosure
       as="nav"
-      className="fixed w-full top-0 z-50 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 shadow-lg border-b border-amber-400/20"
+      className="fixed w-full top-0 z-50"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           {/* Mobile menu button */}
           <div className="flex items-center lg:hidden">
-            <DisclosureButton className="inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-amber-500/20 hover:text-amber-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-amber-500">
+            <DisclosureButton className="inline-flex items-center justify-center rounded-md p-2 text-white hover:text-amber-400 focus:outline-none">
               <span className="sr-only">Open main menu</span>
-              <Bars3Icon aria-hidden="true" className="block h-6 w-6 group-data-[open]:hidden" />
-              <XMarkIcon aria-hidden="true" className="hidden h-6 w-6 group-data-[open]:block" />
+              <Bars3Icon aria-hidden="true" className="block h-7 w-7 group-data-[open]:hidden" />
+              <XMarkIcon aria-hidden="true" className="hidden h-7 w-7 group-data-[open]:block" />
             </DisclosureButton>
           </div>
           
@@ -40,8 +40,8 @@ export default function Navbar() {
                 </svg>
               </div>
               <div className="hidden sm:block">
-                <h1 className="text-2xl font-bold text-white tracking-tight">HOTERU</h1>
-                <p className="text-xs text-amber-400">Luxury Hotel & Resort</p>
+                <h1 className="text-2xl font-bold text-white tracking-tight drop-shadow-lg">HOTERU</h1>
+                <p className="text-xs text-amber-400 drop-shadow-md">Luxury Hotel & Resort</p>
               </div>
             </div>
           </div>
@@ -55,9 +55,9 @@ export default function Navbar() {
                 aria-current={item.current ? 'page' : undefined}
                 className={classNames(
                   item.current 
-                    ? 'bg-amber-500/20 text-amber-400' 
-                    : 'text-white hover:bg-white/5 hover:text-amber-400',
-                  'rounded-md px-4 py-2 text-sm font-semibold transition-all duration-200',
+                    ? 'text-amber-400' 
+                    : 'text-white hover:text-amber-400',
+                  'px-4 py-2 text-sm font-semibold transition-all duration-200 drop-shadow-lg',
                 )}
               >
                 {item.name}
@@ -69,7 +69,7 @@ export default function Navbar() {
           <div className="flex items-center">
             <button
               type="button"
-              className="hidden lg:block bg-gradient-to-r from-amber-500 to-amber-600 text-white px-6 py-2.5 rounded-full hover:from-amber-600 hover:to-amber-700 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm"
+              className="hidden lg:block bg-gradient-to-r from-amber-500 to-amber-600 text-white px-6 py-2.5 rounded-full hover:from-amber-600 hover:to-amber-700 transition-all duration-300 font-semibold shadow-xl hover:shadow-2xl transform hover:scale-105 text-sm"
             >
               BOOK NOW
             </button>
@@ -79,7 +79,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       <DisclosurePanel className="lg:hidden">
-        <div className="space-y-1 px-4 pt-2 pb-4 bg-slate-900/95">
+        <div className="space-y-1 px-4 pt-2 pb-4 bg-slate-900/95 backdrop-blur-md">
           {navigation.map((item) => (
             <DisclosureButton
               key={item.name}
@@ -88,9 +88,9 @@ export default function Navbar() {
               aria-current={item.current ? 'page' : undefined}
               className={classNames(
                 item.current 
-                  ? 'bg-amber-500/20 text-amber-400' 
-                  : 'text-white hover:bg-slate-800 hover:text-amber-400',
-                'block rounded-lg px-4 py-3 text-base font-semibold transition-all duration-200',
+                  ? 'text-amber-400' 
+                  : 'text-white hover:text-amber-400',
+                'block px-4 py-3 text-base font-semibold transition-all duration-200',
               )}
             >
               {item.name}
